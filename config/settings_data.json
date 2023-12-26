@@ -135,6 +135,15 @@
           "link_2": "https:\/\/reseller.gocase.com.br\/pt-BR\/welcome",
           "link_3": "https:\/\/www.gocase.com.br\/central-de-ajuda"
         }
+      },
+      "featured-text": {
+        "type": "featured-text",
+        "settings": {
+          "paragrafo": "Frete Fixo de R$3,90 acima de R$99,00* para pedidos com capinha",
+          "link": "",
+          "texto_link": "Consulte o regulamento",
+          "cor_schema": "#6b0b03"
+        }
       }
     },
     "content_for_index": [
@@ -200,7 +209,7 @@
         "settings": {
           "background": "#6b0b03",
           "background_gradient": "",
-          "text": "#fff",
+          "text": "#ffffff",
           "button": "#121212",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
