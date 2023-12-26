@@ -14,7 +14,7 @@
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
-        "show_line_separator": true,
+        "show_line_separator": false,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "",
         "enable_country_selector": false,
@@ -24,10 +24,16 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "0f8b8e0b-42d9-447a-ab2d-6e05a2eb9452": {
+      "type": "nav-divider",
+      "settings": {
+      }
     }
   },
   "order": [
     "220ecd87-a9fd-4b8f-9d1f-dec2e77e94e5",
-    "header"
+    "header",
+    "0f8b8e0b-42d9-447a-ab2d-6e05a2eb9452"
   ]
 }
