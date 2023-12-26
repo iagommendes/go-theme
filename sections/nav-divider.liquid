@@ -1,0 +1,30 @@
+{%- style -%}
+  .nav-divider {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+  }
+
+  .nav-divider-container {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      height: 10px;
+      width: calc(60% - 50px);
+      background-color: {{ settings.nav_divider_color }};
+      background-color: #F37052;
+      border-radius: 5px;
+  }
+{%- endstyle -%}
+
+<div class="nav-divider">
+  <div class="nav-divider-container">.</div>
+</div>
+
+{% schema %}
+{
+  "name": "Nav Divider",
+  "settings": [],
+  "presets": [{ "name": "Nav Divider" }]
+}
+{% endschema %}
