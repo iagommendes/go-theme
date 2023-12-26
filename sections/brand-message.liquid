@@ -1,0 +1,42 @@
+{%- style -%}
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background-color: #e9ed9a;
+  }
+
+  .brand-message {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #005baa;
+  }
+  .brand-message strong {
+    font-weight: 700;
+  }
+  .brand-message a {
+    color: #0000ed;
+    text-decoration: underline;
+  }
+{%- endstyle -%}
+
+<div class="container">
+  <p class="brand-message">
+    <strong>Frete Fixo</strong> de R$3,90 acima de R$99,00* para pedidos com capinha -
+    <a href="https://www.gocase.com.br/central-de-ajuda">Consulte o regulamento</a>
+  </p>
+</div>
+
+{% schema %}
+{
+  "name": "Brand message",
+  "settings": [],
+  "presets": [{ "name": "Custom Title" }]
+}
+{% endschema %}
