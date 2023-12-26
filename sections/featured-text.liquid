@@ -1,24 +1,37 @@
-{% stylesheet %}
-  <style>
-      .custom-section {
-          color: {{ section.settings.cor_schema }};
-      }
-  </style>
-{% endstylesheet %}
+<style>
+  .container-feature-text-section {
+    background-color: #6b0a03;
+    padding: 20px;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
 
-{% javascript %}
-  // Você pode adicionar JavaScript personalizado aqui, se necessário
-{% endjavascript %}
+    justify-content: center;
+    align-items: center;
+  }
 
-<div class="custom-section">
-  <p>{{ section.settings.paragrafo }}</p>
-  -
-  <a href="{{ section.settings.link }}">{{ section.settings.texto_link }}</a>
+  .container-feature-text-section p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .container-feature-text-section a {
+    color: #fff;
+    text-decoration: underline;
+  }
+</style>
+
+<div class="container-feature-text-section">
+  <p>
+    <strong>{{ section.settings.paragrafo }}</strong> -
+    <a href="{{ section.settings.link }}">{{ section.settings.texto_link }}</a>
+  </p>
 </div>
 
 {% schema %}
 {
-  "name": "Seção personalizada",
+  "name": "Texto em Destaque",
   "settings": [
     {
       "type": "text",
@@ -36,12 +49,6 @@
       "id": "texto_link",
       "label": "Texto do link",
       "default": "Clique aqui"
-    },
-    {
-      "type": "color",
-      "id": "cor_schema",
-      "label": "Cor do esquema",
-      "default": "#000000"
     }
   ]
 }
