@@ -1,0 +1,48 @@
+{% stylesheet %}
+  <style>
+      .custom-section {
+          color: {{ section.settings.cor_schema }};
+      }
+  </style>
+{% endstylesheet %}
+
+{% javascript %}
+  // Você pode adicionar JavaScript personalizado aqui, se necessário
+{% endjavascript %}
+
+<div class="custom-section">
+  <p>{{ section.settings.paragrafo }}</p>
+  -
+  <a href="{{ section.settings.link }}">{{ section.settings.texto_link }}</a>
+</div>
+
+{% schema %}
+{
+  "name": "Seção personalizada",
+  "settings": [
+    {
+      "type": "text",
+      "id": "paragrafo",
+      "label": "Texto do parágrafo",
+      "default": "Insira seu texto aqui"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "URL do link"
+    },
+    {
+      "type": "text",
+      "id": "texto_link",
+      "label": "Texto do link",
+      "default": "Clique aqui"
+    },
+    {
+      "type": "color",
+      "id": "cor_schema",
+      "label": "Cor do esquema",
+      "default": "#000000"
+    }
+  ]
+}
+{% endschema %}
