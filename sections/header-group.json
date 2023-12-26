@@ -2,6 +2,11 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "220ecd87-a9fd-4b8f-9d1f-dec2e77e94e5": {
+      "type": "topbar",
+      "settings": {
+      }
+    },
     "header": {
       "type": "header",
       "settings": {
@@ -22,6 +27,7 @@
     }
   },
   "order": [
+    "220ecd87-a9fd-4b8f-9d1f-dec2e77e94e5",
     "header"
   ]
 }
