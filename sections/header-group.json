@@ -2,38 +2,6 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "FRETE GRÁTIS A PARTIR DE R$149 PARA PEDIDOS COM CASE",
-            "link": ""
-          }
-        },
-        "422d224a-249b-49b6-870e-89c37db410ae": {
-          "type": "announcement",
-          "settings": {
-            "text": "6X SEM JUROS EM PEDIDOS A PARTIR DE R$ 499!",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement-bar-0",
-        "422d224a-249b-49b6-870e-89c37db410ae"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "show_line_separator": true,
-        "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_country_selector": false,
-        "enable_language_selector": false
-      }
-    },
     "header": {
       "type": "header",
       "settings": {
@@ -54,7 +22,6 @@
     }
   },
   "order": [
-    "announcement-bar",
     "header"
   ]
 }
