@@ -1,0 +1,123 @@
+{%- style -%}
+  .topbar {
+    background-color: #fdf7fa;
+    padding: 10px 0;
+  }
+
+  .topbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 33px;
+  }
+
+  .topbar-messages {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .topbar-message {
+    font-size: 16px;
+    font-weight: 700;
+    color: #626266;
+    margin-right: 20px;
+    margin-bottom: 40px;
+  }
+
+  .topbar-progress {
+    width: 100px;
+    height: 2px;
+    background-color: #000;
+    margin-right: 20px;
+  }
+
+  .topbar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .topbar-menu li {
+    margin-right: 50px;
+    list-style-type: none;
+  }
+
+  .topbar-menu li a {
+    font-size: 14px;
+    color: #005baa;
+    text-decoration: none;
+    font-weight: 700;
+    decoration: none;
+  }
+
+  .topbar-menu li a:hover {
+    color: #000;
+  }
+
+  @media (max-width: 767px) {
+    .topbar-container {
+      flex-direction: column;
+    }
+
+    .topbar-messages {
+      margin-bottom: 10px;
+    }
+
+    .topbar-menu {
+      margin-top: 10px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .topbar-messages {
+      margin-right: 20px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .topbar-messages {
+      margin-right: 20px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .topbar-messages {
+      margin-right: 20px;
+    }
+  }
+{%- endstyle -%}
+
+<script>
+  function scrollMessages() {
+    const container = document.getElementById('topbar-messages');
+    const firstMessage = container.firstElementChild;
+    container.appendChild(firstMessage);
+  }
+
+  setInterval(scrollMessages, 2000);
+</script>
+
+<div class="topbar">
+  <div class="topbar-container">
+    <div id="topbar-messages" class="topbar-messages">
+      <div class="topbar-message"><b>FRETE GRÁTIS A PARTIR DE R$149 PARA PEDIDOS COM CASE </b></div>
+      <div class="topbar-message"><b>6X SEM JUROS EM PEDIDOS A PARTIR DE R$ 499! </b></div>
+    </div>
+    <ul class="topbar-menu">
+      <li><a href="{{ routes.home_url }}">Go For Good</a></li>
+      <li><a href="{{ routes.about_url }}">Seja revendedor(a)</a></li>
+      <li><a href="{{ routes.contact_url }}">Central de Ajuda</a></li>
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Top bar",
+  "settings": [],
+  "presets": [{ "name": "Top bar" }]
+}
+{% endschema %}
