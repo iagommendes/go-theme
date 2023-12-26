@@ -249,6 +249,20 @@
           font-size: 1.6rem;
         }
       }
+
+      .custom-announcement.desktop {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .custom-announcement.desktop {
+          display: block;
+        }
+
+        .custom-announcement.mobile {
+          display: none;
+        }
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
@@ -291,7 +305,15 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
+    <div class="custom-announcement desktop">
+      {% section 'custom-announcement' %}
+    </div>
+
     {% sections 'header-group' %}
+
+    <div class="custom-announcement mobile">
+      {% section 'custom-announcement' %}
+    </div>
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
@@ -343,6 +365,21 @@
         recipientFormExpanded: `{{ 'recipient.form.expanded' | t }}`,
         recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
       };
+    </script>
+
+    <script>
+      var messages = document.querySelectorAll('.custom-section .message');
+      var currentIndex = 0;
+
+      function showNextMessage() {
+        messages.forEach(function (message, index) {
+          message.style.display = index === currentIndex ? 'block' : 'none';
+        });
+
+        currentIndex = (currentIndex + 1) % messages.length;
+      }
+
+      setInterval(showNextMessage, 3000);
     </script>
 
     {%- if settings.predictive_search_enabled -%}
