@@ -1,0 +1,156 @@
+<style>
+  .custom-announcement {
+    background-color: #f5f5f5;
+    padding: 0px 10px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .messages {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 1.4rem;
+  }
+
+  .message {
+    animation: slide 5s linear infinite;
+    opacity: 0;
+    margin-bottom: 10px;
+  }
+
+  @keyframes slide {
+    0%,
+    20% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    25%,
+    45% {
+      transform: translateY(-100%);
+      opacity: 1;
+    }
+    50%,
+    70% {
+      transform: translateY(-200%);
+      opacity: 1;
+    }
+    75%,
+    95% {
+      transform: translateY(-300%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-300%);
+    }
+  }
+
+  .links {
+    display: none;
+  }
+
+  .links {
+    padding: 5px 5px;
+  }
+
+  .links a {
+    margin-right: 5px;
+  }
+
+  .links a:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: 768px) {
+    .links {
+      display: block;
+    }
+
+    .custom-announcement {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var messages = document.querySelectorAll('.message');
+    var current = 0;
+
+    // Remova a classe 'active' de todas as mensagens, exceto a primeira
+    for (var i = 1; i < messages.length; i++) {
+      messages[i].classList.remove('active');
+    }
+
+    setInterval(function () {
+      // Remova a classe 'active' da mensagem atual
+      messages[current].classList.remove('active');
+
+      // Calcule o índice da próxima mensagem
+      current = (current + 1) % messages.length;
+
+      // Adicione a classe 'active' à próxima mensagem
+      messages[current].classList.add('active');
+    }, 1000); // Altere este valor para ajustar o intervalo de tempo
+  });
+</script>
+<div class="custom-announcement">
+  <div class="messages" style="display: flex; flex-direction: column;">
+    <p class="message active">{{ section.settings.message_1 }}</p>
+    <p class="message">{{ section.settings.message_2 }}</p>
+    <p class="message">{{ section.settings.message_3 }}</p>
+  </div>
+
+  <div class="links">
+    <a href="{{ section.settings.link_1 }}">Link 1</a>
+    <a href="{{ section.settings.link_2 }}">Link 2</a>
+    <a href="{{ section.settings.link_3 }}">Link 3</a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Seção personalizada",
+  "settings": [
+    {
+      "type": "text",
+      "id": "message_1",
+      "label": "Mensagem 1",
+      "default": "Mensagem 1"
+    },
+    {
+      "type": "text",
+      "id": "message_2",
+      "label": "Mensagem 2",
+      "default": "Mensagem 2"
+    },
+    {
+      "type": "text",
+      "id": "message_3",
+      "label": "Mensagem 3",
+      "default": "Mensagem 3"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link 1"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link 2"
+    },
+    {
+      "type": "url",
+      "id": "link_3",
+      "label": "Link 3"
+    }
+  ]
+}
+{% endschema %}
