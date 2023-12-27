@@ -92,12 +92,24 @@
         "padding_top": 20,
         "padding_bottom": 16
       }
+    },
+    "6b6b69ec-193b-4cf5-86c4-92374281bb3c": {
+      "type": "featured-section",
+      "settings": {
+      }
+    },
+    "cfb2ead9-44f3-4171-9165-cbd9e94b654f": {
+      "type": "featured-cards",
+      "settings": {
+      }
     }
   },
   "order": [
     "b3a0bcd3-6aea-483f-bc69-d3830dcf819d",
     "db5a73f3-8079-499f-b1ba-60620d0774e7",
     "55290230-7deb-400e-8bf3-f7d31bedcf79",
-    "20f6b6ba-65f5-4d84-b781-6071b37b2f66"
+    "20f6b6ba-65f5-4d84-b781-6071b37b2f66",
+    "6b6b69ec-193b-4cf5-86c4-92374281bb3c",
+    "cfb2ead9-44f3-4171-9165-cbd9e94b654f"
   ]
 }
