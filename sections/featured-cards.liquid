@@ -1,0 +1,67 @@
+{%- style -%}
+  .featured-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 19px;
+  }
+  .section-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background_color: #fff;
+    width: 278px;
+    border-radius: 5px;
+  }
+  .section-item img {
+    border-radius: 5px 5px 0 0;
+  }
+  .section-item p {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    color: #424246;
+    background-color: #fff;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+{%- endstyle -%}
+
+<div>
+  <div class="featured-section">
+    <div class="section-item">
+      <img src="https://i.ibb.co/T2fd89p/Captura-de-Tela-2023-12-27-a-s-01-10-18.png" alt="featured-1">
+
+      <p>Disney, Harry e +</p>
+    </div>
+    <div class="section-item">
+      <img src="https://i.ibb.co/vVHyGH4/Captura-de-Tela-2023-12-27-a-s-01-10-29.png" alt="featured-1">
+
+      <p>Times de Futebol</p>
+    </div>
+    <div class="section-item">
+      <img src="https://i.ibb.co/44wjYXN/Captura-de-Tela-2023-12-27-a-s-01-10-40.png" alt="featured-1">
+
+      <p>iPhone 14</p>
+    </div>
+    <div class="section-item">
+      <img src="https://i.ibb.co/ZdK13zf/Captura-de-Tela-2023-12-27-a-s-01-11-15.png" alt="featured-1">
+      <p>Novas estampas</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured cards",
+  "settings": [],
+  "presets": [{ "name": "Featured cards" }]
+}
+{% endschema %}
