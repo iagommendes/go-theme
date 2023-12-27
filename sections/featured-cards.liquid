@@ -1,11 +1,30 @@
 {%- style -%}
-  .featured-section {
+  .featured-cards-container {
+    display: flex;
+    flex-direction: column;
+    margin: 8rem auto;
+    padding: 0 15px;
+    width: 100%;
+    background-color: #f5fbfb;
+  }
+  .featured-cards-container h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px auto;
+    color: #424246;
+    width: auto;
+    display: flex;
+    max-width: 1200px;
+  }
+  .featured-section-cards {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    gap: 19px;
+    justify-content: space-between;
+    margin: 8rem auto;
+    max-width: 1200px;
+    padding: 0 15px;
+    width: 100%;
+    gap: 10px;
   }
   .section-item {
     display: flex;
@@ -32,10 +51,17 @@
     align-items: center;
     padding: 10px;
   }
+
+  .featured-cards-container h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #424246;
+  }
 {%- endstyle -%}
 
-<div>
-  <div class="featured-section">
+<div class="featured-cards-container">
+  <h2>Destaques</h2>
+  <div class="featured-section-cards">
     <div class="section-item">
       <img src="https://i.ibb.co/T2fd89p/Captura-de-Tela-2023-12-27-a-s-01-10-18.png" alt="featured-1">
 
