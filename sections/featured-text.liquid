@@ -1,55 +1,24 @@
-<style>
-  .container-feature-text-section {
-    background-color: #6b0a03;
-    padding: 20px;
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-  }
-
-  .container-feature-text-section p {
-    font-size: 16px;
+{%- style -%}
+  .featured-text {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: #323236;
     text-align: center;
+    background-color: #fcfdf7;
   }
+{%- endstyle -%}
 
-  .container-feature-text-section a {
-    color: #fff;
-    text-decoration: underline;
-  }
-</style>
-
-<div class="container-feature-text-section">
-  <p>
-    <strong>{{ section.settings.paragrafo }}</strong> -
-    <a href="{{ section.settings.link }}">{{ section.settings.texto_link }}</a>
-  </p>
+<div class="featured-text">
+  <p>Ofertas e Lançamentos</p>
 </div>
 
 {% schema %}
 {
-  "name": "Texto em Destaque",
-  "settings": [
-    {
-      "type": "text",
-      "id": "paragrafo",
-      "label": "Texto do parágrafo",
-      "default": "Insira seu texto aqui"
-    },
-    {
-      "type": "url",
-      "id": "link",
-      "label": "URL do link"
-    },
-    {
-      "type": "text",
-      "id": "texto_link",
-      "label": "Texto do link",
-      "default": "Clique aqui"
-    }
-  ]
+  "name": "Featured text",
+  "settings": [],
+  "presets": [{ "name": "Featured text" }]
 }
 {% endschema %}
