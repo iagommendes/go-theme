@@ -15,28 +15,60 @@
     padding: 0;
     font-size: 20px;
     line-height: 1.5;
-    color: #005baa;
+    color: {{ section.settings.brand_message_text_color | default: "#005baa" }};
+    text-align: center; /* Center text by default */
   }
   .brand-message strong {
     font-weight: 700;
   }
   .brand-message a {
-    color: #0000ed;
+    color: {{ section.settings.brand_message_link_color | default: "#0000ed" }};
     text-decoration: underline;
+  }
+
+  @media (max-width: 767px) {
+    .brand-message {
+      text-align: center; /* Center text on mobile screens */
+    }
   }
 {%- endstyle -%}
 
 <div class="container">
   <p class="brand-message">
-    <strong>Frete Fixo</strong> de R$3,90 acima de R$99,00* para pedidos com capinha -
-    <a href="https://www.gocase.com.br/central-de-ajuda">Consulte o regulamento</a>
+    <strong>{{ section.settings.brand_message_strong_text | default: "Frete Fixo" }}</strong> de R$3,90 acima de R$99,00* para pedidos com capinha -
+    <a href="{{ section.settings.brand_message_link | default: "https://www.gocase.com.br/central-de-ajuda" }}">Consulte o regulamento</a>
   </p>
 </div>
 
 {% schema %}
 {
   "name": "Brand message",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "label": "Strong Text",
+      "id": "brand_message_strong_text",
+      "default": "Frete Fixo"
+    },
+    {
+      "type": "text",
+      "label": "Link URL",
+      "id": "brand_message_link",
+      "default": "https://www.gocase.com.br/central-de-ajuda"
+    },
+    {
+      "type": "color",
+      "label": "Text Color",
+      "id": "brand_message_text_color",
+      "default": "#005baa"
+    },
+    {
+      "type": "color",
+      "label": "Link Color",
+      "id": "brand_message_link_color",
+      "default": "#0000ed"
+    }
+  ],
   "presets": [{ "name": "Brand message" }]
 }
 {% endschema %}
