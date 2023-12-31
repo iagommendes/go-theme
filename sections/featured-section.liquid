@@ -20,7 +20,8 @@
 
   .section-item-row img {
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 5px;
   }
 
@@ -30,52 +31,88 @@
     margin-top: 5px;
     font-weight: 700;
   }
+
+  @media (max-width: 767px) {
+    .featured-section-row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section-item-row {
+      margin-bottom: 20px;
+    }
+  }
 {%- endstyle -%}
 
-<div class="featured-section-row">
-  <div class="section-item-row">
-    <img src="https://static-production.gocase.com.br/mini_banners/3441/desktop/NATAL_BR_Minibanners_2023_1.png" alt="">
-    <p>Capinhas para celular</p>
-  </div>
+{%- assign sections = section.settings.featured_sections -%}
 
-  <div class="section-item-row">
-    <img
-      src="https://static-production.gocase.com.br/mini_banners/3474/desktop/TERM_NATAL_BR_Minibanners_2023.png"
-      alt=""
-    >
-    <p>Linha Térmica</p>
-  </div>
+{% for featured_section in sections %}
+  <div class="featured-section-row">
+    <div class="section-item-row">
+      <img src="{{ featured_section.image }}" alt="">
+      <p>{{ featured_section.title }}</p>
+    </div>
 
-  <div class="section-item-row">
-    <img src="https://static-production.gocase.com.br/mini_banners/3443/desktop/NATAL_BR_Minibanners_2023_3.png" alt="">
-    <p>Carregadores Portáteis</p>
-  </div>
-</div>
+    <div class="section-item-row">
+      <img src="{{ featured_section.image2 }}" alt="">
+      <p>{{ featured_section.title2 }}</p>
+    </div>
 
-<div class="featured-section-row">
-  <div class="section-item-row">
-    <img
-      src="https://static-production.gocase.com.br/mini_banners/3475/desktop/BOLSAS_NATAL_BR_Minibanners_2023.png"
-      alt=""
-    >
-    <p>Bolsas e Mochilas</p>
+    <div class="section-item-row">
+      <img src="{{ featured_section.image3 }}" alt="">
+      <p>{{ featured_section.title3 }}</p>
+    </div>
   </div>
-
-  <div class="section-item-row">
-    <img src="https://static-production.gocase.com.br/mini_banners/3445/desktop/NATAL_BR_Minibanners_2023_5.png" alt="">
-    <p>Necessaires</p>
-  </div>
-
-  <div class="section-item-row">
-    <img src="https://static-production.gocase.com.br/mini_banners/3446/desktop/NATAL_BR_Minibanners_2023_6.png" alt="">
-    <p>Bolsas Térmicas</p>
-  </div>
-</div>
+{% endfor %}
 
 {% schema %}
 {
   "name": "Featured section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "group",
+      "label": "Featured Sections",
+      "id": "featured_sections",
+      "max_items": 3,
+      "item_names": [
+        "Section 1",
+        "Section 2",
+        "Section 3"
+      ],
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        },
+        {
+          "type": "text",
+          "label": "Title 2",
+          "id": "title2"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image 2",
+          "id": "image2"
+        },
+        {
+          "type": "text",
+          "label": "Title 3",
+          "id": "title3"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image 3",
+          "id": "image3"
+        }
+      ]
+    }
+  ],
   "presets": [{ "name": "Featured section" }]
 }
 {% endschema %}
