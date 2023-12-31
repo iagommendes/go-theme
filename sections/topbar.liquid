@@ -1,7 +1,7 @@
 {%- style -%}
   .topbar {
     background-color: #fdf7fa;
-    padding: 10px 0;
+    padding: 0;
   }
 
   .topbar-container {
@@ -20,8 +20,8 @@
   }
 
   .topbar-message {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 500;
     color: #626266;
     margin-right: 20px;
     margin-bottom: 40px;
@@ -71,13 +71,7 @@
     }
   }
 
-  @media (min-width: 768px) and (max-width: 991px) {
-    .topbar-messages {
-      margin-right: 20px;
-    }
-  }
-
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 768px) and (max-width: 1199px) {
     .topbar-messages {
       margin-right: 20px;
     }
@@ -100,11 +94,32 @@
   setInterval(scrollMessages, 2000);
 </script>
 
+{% schema %}
+{
+  "name": "Top bar",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Custom Message 1",
+      "id": "custom_message_1",
+      "default": "FRETE GRÁTIS A PARTIR DE R$149 PARA PEDIDOS COM CASE"
+    },
+    {
+      "type": "text",
+      "label": "Custom Message 2",
+      "id": "custom_message_2",
+      "default": "6X SEM JUROS EM PEDIDOS A PARTIR DE R$ 499!"
+    }
+  ],
+  "presets": [{ "name": "Top bar" }]
+}
+{% endschema %}
+
 <div class="topbar">
   <div class="topbar-container">
     <div id="topbar-messages" class="topbar-messages">
-      <div class="topbar-message"><b>FRETE GRÁTIS A PARTIR DE R$149 PARA PEDIDOS COM CASE </b></div>
-      <div class="topbar-message"><b>6X SEM JUROS EM PEDIDOS A PARTIR DE R$ 499! </b></div>
+      <div class="topbar-message"><b>{{ section.settings.custom_message_1 }}</b></div>
+      <div class="topbar-message"><b>{{ section.settings.custom_message_2 }}</b></div>
     </div>
     <ul class="topbar-menu">
       <li><a href="{{ routes.home_url }}">Go For Good</a></li>
@@ -113,11 +128,3 @@
     </ul>
   </div>
 </div>
-
-{% schema %}
-{
-  "name": "Top bar",
-  "settings": [],
-  "presets": [{ "name": "Top bar" }]
-}
-{% endschema %}
