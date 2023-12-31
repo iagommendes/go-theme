@@ -5,6 +5,14 @@
     "220ecd87-a9fd-4b8f-9d1f-dec2e77e94e5": {
       "type": "topbar",
       "settings": {
+        "custom_message_1": "FRETE GRÁTIS A PARTIR DE R$149 PARA PEDIDOS COM CASE",
+        "custom_message_2": "6X SEM JUROS EM PEDIDOS A PARTIR DE R$ 499!",
+        "menu_link_1": "https:\/\/www.gocase.com.br\/go-for-good",
+        "menu_link_1_text": "Go For Good",
+        "menu_link_2": "https:\/\/reseller.gocase.com.br\/pt-BR\/welcome",
+        "menu_link_2_text": "Seja revendedor(a)",
+        "menu_link_3": "https:\/\/www.gocase.com.br\/central-de-ajuda",
+        "menu_link_3_text": "Central de Ajuda"
       }
     },
     "header": {
