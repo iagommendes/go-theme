@@ -50,7 +50,6 @@
     color: #005baa;
     text-decoration: none;
     font-weight: 700;
-    decoration: none;
   }
 
   .topbar-menu li a:hover {
@@ -109,6 +108,42 @@
       "label": "Custom Message 2",
       "id": "custom_message_2",
       "default": "6X SEM JUROS EM PEDIDOS A PARTIR DE R$ 499!"
+    },
+    {
+      "type": "text",
+      "label": "Menu Link 1",
+      "id": "menu_link_1",
+      "default": "{{ routes.home_url }}"
+    },
+    {
+      "type": "text",
+      "label": "Menu Link 1 Text",
+      "id": "menu_link_1_text",
+      "default": "Go For Good"
+    },
+    {
+      "type": "text",
+      "label": "Menu Link 2",
+      "id": "menu_link_2",
+      "default": "{{ routes.about_url }}"
+    },
+    {
+      "type": "text",
+      "label": "Menu Link 2 Text",
+      "id": "menu_link_2_text",
+      "default": "Seja revendedor(a)"
+    },
+    {
+      "type": "text",
+      "label": "Menu Link 3",
+      "id": "menu_link_3",
+      "default": "{{ routes.contact_url }}"
+    },
+    {
+      "type": "text",
+      "label": "Menu Link 3 Text",
+      "id": "menu_link_3_text",
+      "default": "Central de Ajuda"
     }
   ],
   "presets": [{ "name": "Top bar" }]
@@ -122,9 +157,9 @@
       <div class="topbar-message"><b>{{ section.settings.custom_message_2 }}</b></div>
     </div>
     <ul class="topbar-menu">
-      <li><a href="{{ routes.home_url }}">Go For Good</a></li>
-      <li><a href="{{ routes.about_url }}">Seja revendedor(a)</a></li>
-      <li><a href="{{ routes.contact_url }}">Central de Ajuda</a></li>
+      <li><a href="{{ section.settings.menu_link_1 }}">{{ section.settings.menu_link_1_text }}</a></li>
+      <li><a href="{{ section.settings.menu_link_2 }}">{{ section.settings.menu_link_2_text }}</a></li>
+      <li><a href="{{ section.settings.menu_link_3 }}">{{ section.settings.menu_link_3_text }}</a></li>
     </ul>
   </div>
 </div>
