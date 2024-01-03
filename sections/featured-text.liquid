@@ -1,25 +1,60 @@
 {%- style -%}
   .featured-text {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-    font-size: 27px;
-    font-weight: 700;
+    padding: 20px;
+    margin: 0;
+    font-size: {{ section.settings.font_size | default: '27px' }};
+    font-weight: {{ section.settings.font_weight | default: '700' }};
     line-height: 1.5em;
-    color: #323236;
+    color: {{ section.settings.font_color | default: '#323236' }};
     text-align: center;
-    background-color: #fcfdf7;
-    padding-top: 20px;
+    background-color: {{ section.settings.background_color | default: '#fcfdf7' }};
   }
 {%- endstyle -%}
 
 <div class="featured-text">
-  <spam>Ofertas e Lançamentos</spam>
+  <span>{{ section.settings.text | default: 'Ofertas e Lançamentos' }}</span>
 </div>
 
 {% schema %}
 {
   "name": "Featured text",
-  "settings": [],
-  "presets": [{ "name": "Featured text" }]
+  "settings": [
+    {
+      "type": "text",
+      "label": "Text",
+      "id": "text",
+      "default": "Ofertas e Lançamentos"
+    },
+    {
+      "type": "color",
+      "label": "Background Color",
+      "id": "background_color",
+      "default": "#fcfdf7"
+    },
+    {
+      "type": "color",
+      "label": "Font Color",
+      "id": "font_color",
+      "default": "#323236"
+    },
+    {
+      "type": "text",
+      "label": "Font Size",
+      "id": "font_size",
+      "default": "27px"
+    },
+    {
+      "type": "text",
+      "label": "Font Weight",
+      "id": "font_weight",
+      "default": "700"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured text",
+      "category": "Custom"
+    }
+  ]
 }
 {% endschema %}
