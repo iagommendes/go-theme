@@ -204,8 +204,17 @@
   <style>
     @media (max-width: 767px) {
       .topbar {
-        display: none; 
+        display: flex;
+        flex-direction: column;
+      }
+      .topbar-menu {
+        display: none; /* Hide the menu on mobile devices */
+        margin-top: 10px;
+      }
+      .topbar-messages {
+        margin-bottom: 10px;
       }
     }
   </style>
 {% endif %}
+
