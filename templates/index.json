@@ -151,6 +151,11 @@
         "5625cf11-9965-4208-be48-86e1bb28d283",
         "94e65f3d-7ca1-4842-bc90-4cc5c191b060"
       ],
+      "custom_css": [
+        ".full-unstyled-link {font-size: 21px; text-align: center; margin-top: 5px; font-weight: 700;}",
+        ".icon-wrap {display: none;}",
+        ".card__media {border-radius: 4px;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
