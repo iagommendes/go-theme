@@ -1,6 +1,7 @@
 {%- style -%}
   .topbar {
-    background-color: #fdf7fa;
+    background-color: {{ section.settings.background_color | default: "#fdf7fa" }};
+    color: {{ section.settings.text_color | default: "#626266" }};
     padding: 0;
   }
 
@@ -17,15 +18,15 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 24px;
-    overflow: hidden; /* Ensure content doesn't overflow */
+    overflow: hidden; 
   }
 
   .topbar-message {
     font-size: 14px;
     font-weight: 500;
-    color: #626266;
+    color: {{ section.settings.text_color | default: "#626266" }};
     margin-right: 20px;
-    margin-bottom: 10px; /* Adjust margin to control spacing between messages */
+    margin-bottom: 10px;
   }
 
   .topbar-progress {
@@ -43,18 +44,18 @@
 
   .topbar-menu li {
     list-style-type: none;
-    margin-right: 20px; /* Adjust the spacing between menu items */
+    margin-right: 20px;
   }
 
   .topbar-menu li:not(:last-child)::after {
-    content: "•"; /* Unicode character for a bullet point, you can customize this */
-    margin-left: 10px; /* Adjust the spacing between dots and text */
-    color: #005baa; /* Color of the dots */
+    content: "•";
+    margin-left: 10px;
+    color: {{ section.settings.link_color | default: "#005baa" }};
   }
 
   .topbar-menu li a {
     font-size: 14px;
-    color: #005baa;
+    color: {{ section.settings.link_color | default: "#005baa" }};
     text-decoration: none;
     font-weight: 700;
   }
@@ -91,94 +92,129 @@
   }
 {%- endstyle -%}
 
-
 <script>
   function scrollMessages() {
     const container = document.getElementById('topbar-messages');
     const firstMessage = container.firstElementChild;
 
-    // Remove the first message
     container.removeChild(firstMessage);
-
-    // Clone the first message
     const clonedMessage = firstMessage.cloneNode(true);
-
-    // Append the cloned message to the container
     container.appendChild(clonedMessage);
   }
 
   setInterval(scrollMessages, 2000);
 </script>
 
-
-
 {% schema %}
-{
-  "name": "Top bar",
-  "settings": [
-    {
-      "type": "text",
-      "label": "Custom Message 1",
-      "id": "custom_message_1",
-      "default": "FRETE GRÁTIS A PARTIR DE R$149 PARA PEDIDOS COM CASE"
-    },
-    {
-      "type": "text",
-      "label": "Custom Message 2",
-      "id": "custom_message_2",
-      "default": "6X SEM JUROS EM PEDIDOS A PARTIR DE R$ 499!"
-    },
-    {
-      "type": "text",
-      "label": "Menu Link 1",
-      "id": "menu_link_1",
-      "default": "{{ routes.home_url }}"
-    },
-    {
-      "type": "text",
-      "label": "Menu Link 1 Text",
-      "id": "menu_link_1_text",
-      "default": "Go For Good"
-    },
-    {
-      "type": "text",
-      "label": "Menu Link 2",
-      "id": "menu_link_2",
-      "default": "{{ routes.about_url }}"
-    },
-    {
-      "type": "text",
-      "label": "Menu Link 2 Text",
-      "id": "menu_link_2_text",
-      "default": "Seja revendedor(a)"
-    },
-    {
-      "type": "text",
-      "label": "Menu Link 3",
-      "id": "menu_link_3",
-      "default": "{{ routes.contact_url }}"
-    },
-    {
-      "type": "text",
-      "label": "Menu Link 3 Text",
-      "id": "menu_link_3_text",
-      "default": "Central de Ajuda"
-    }
-  ],
-  "presets": [{ "name": "Top bar" }]
-}
-{% endschema %}
+  {
+    "name": "Top Bar",
+    "settings": [
+      {
+        "type": "color",
+        "label": "Background Color",
+        "id": "background_color",
+        "default": "#fdf7fa"
+      },
+      {
+        "type": "color",
+        "label": "Text Color",
+        "id": "text_color",
+        "default": "#626266"
+      },
+      {
+        "type": "color",
+        "label": "Link Color",
+        "id": "link_color",
+        "default": "#005baa"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show on Desktop",
+        "id": "show_on_desktop",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "label": "Show on Mobile",
+        "id": "show_on_mobile",
+        "default": true
+      },
+      {
+        "type": "text",
+        "label": "Custom Message 1",
+        "id": "custom_message_1",
+        "default": "FRETE GRÁTIS A PARTIR DE R$149 PARA PEDIDOS COM CASE"
+      },
+      {
+        "type": "text",
+        "label": "Custom Message 2",
+        "id": "custom_message_2",
+        "default": "6X SEM JUROS EM PEDIDOS A PARTIR DE R$ 499!"
+      },
+      {
+        "type": "text",
+        "label": "Menu Link 1",
+        "id": "menu_link_1",
+        "default": "{{ routes.home_url }}"
+      },
+      {
+        "type": "text",
+        "label": "Menu Link 1 Text",
+        "id": "menu_link_1_text",
+        "default": "Go For Good"
+      },
+      {
+        "type": "text",
+        "label": "Menu Link 2",
+        "id": "menu_link_2",
+        "default": "{{ routes.about_url }}"
+      },
+      {
+        "type": "text",
+        "label": "Menu Link 2 Text",
+        "id": "menu_link_2_text",
+        "default": "Seja revendedor(a)"
+      },
+      {
+        "type": "text",
+        "label": "Menu Link 3",
+        "id": "menu_link_3",
+        "default": "{{ routes.contact_url }}"
+      },
+      {
+        "type": "text",
+        "label": "Menu Link 3 Text",
+        "id": "menu_link_3_text",
+        "default": "Central de Ajuda"
+      }
+    ],
+    "presets": [{ "name": "Top Bar" }]
+  }
+  {% endschema %}
+  
 
-<div class="topbar">
-  <div class="topbar-container">
-    <div id="topbar-messages" class="topbar-messages">
-      <div class="topbar-message"><b>{{ section.settings.custom_message_1 }}</b></div>
-      <div class="topbar-message"><b>{{ section.settings.custom_message_2 }}</b></div>
+<div class="topbar" style="background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }}">
+  {% if section.settings.show_on_desktop %}
+    <div class="topbar-container">
+      <div id="topbar-messages" class="topbar-messages">
+        <div class="topbar-message"><b>{{ section.settings.custom_message_1 }}</b></div>
+        <div class="topbar-message"><b>{{ section.settings.custom_message_2 }}</b></div>
+      </div>
+      <ul class="topbar-menu">
+        <li><a href="{{ section.settings.menu_link_1 }}" style="color: {{ section.settings.link_color }}">{{ section.settings.menu_link_1_text }}</a></li>
+        <li><a href="{{ section.settings.menu_link_2 }}" style="color: {{ section.settings.link_color }}">{{ section.settings.menu_link_2_text }}</a></li>
+        <li><a href="{{ section.settings.menu_link_3 }}" style="color: {{ section.settings.link_color }}">{{ section.settings.menu_link_3_text }}</a></li>
+      </ul>
     </div>
-    <ul class="topbar-menu">
-      <li><a href="{{ section.settings.menu_link_1 }}">{{ section.settings.menu_link_1_text }}</a></li>
-      <li><a href="{{ section.settings.menu_link_2 }}">{{ section.settings.menu_link_2_text }}</a></li>
-      <li><a href="{{ section.settings.menu_link_3 }}">{{ section.settings.menu_link_3_text }}</a></li>
-    </ul>
-  </div>
+  {% endif %}
 </div>
+
+{% if section.settings.show_on_mobile %}
+  <style>
+    @media (max-width: 767px) {
+      .topbar {
+        display: block;
+      }
+    }
+  </style>
+{% endif %}
