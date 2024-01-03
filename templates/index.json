@@ -61,18 +61,53 @@
         "brand_message_strong_text": "Frete Fixo",
         "brand_message_link": "https:\/\/www.gocase.com.br\/central-de-ajuda",
         "brand_message_text_color": "#005baa",
-        "brand_message_link_color": "#0000ed"
+        "brand_message_link_color": "#0000ed",
+        "brand_message_background_color": "#e9ed9a"
       }
     },
     "55290230-7deb-400e-8bf3-f7d31bedcf79": {
       "type": "featured-text",
       "settings": {
+        "text": "Ofertas e Lançamentos",
+        "background_color": "#fcfdf7",
+        "font_color": "#323236",
+        "font_size": "27px",
+        "font_weight": "700"
+      }
+    },
+    "649910a4-c1f8-4364-b535-4b3e8ab72005": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "automated-collection",
+        "products_to_show": 5,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-549faed2-1e25-400c-8337-540de83fe199",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "b3a0bcd3-6aea-483f-bc69-d3830dcf819d",
     "db5a73f3-8079-499f-b1ba-60620d0774e7",
-    "55290230-7deb-400e-8bf3-f7d31bedcf79"
+    "55290230-7deb-400e-8bf3-f7d31bedcf79",
+    "649910a4-c1f8-4364-b535-4b3e8ab72005"
   ]
 }
