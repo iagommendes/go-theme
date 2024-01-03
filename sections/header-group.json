@@ -5,6 +5,11 @@
     "220ecd87-a9fd-4b8f-9d1f-dec2e77e94e5": {
       "type": "topbar",
       "settings": {
+        "background_color": "#fdf7fa",
+        "text_color": "#626266",
+        "link_color": "#005baa",
+        "show_on_desktop": true,
+        "show_on_mobile": false,
         "custom_message_1": "FRETE GRÁTIS A PARTIR DE R$149 PARA PEDIDOS COM CASE",
         "custom_message_2": "6X SEM JUROS EM PEDIDOS A PARTIR DE R$ 499!",
         "menu_link_1": "https:\/\/www.gocase.com.br\/go-for-good",
