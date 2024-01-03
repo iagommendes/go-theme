@@ -102,12 +102,74 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "6b1b4d01-ca56-4210-ae30-04baadfe08d6": {
+      "type": "collection-list",
+      "blocks": {
+        "template--17149120643291__6b1b4d01-ca56-4210-ae30-04baadfe08d6-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "capinhas-para-celular"
+          }
+        },
+        "template--17149120643291__6b1b4d01-ca56-4210-ae30-04baadfe08d6-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "linha-termica"
+          }
+        },
+        "template--17149120643291__6b1b4d01-ca56-4210-ae30-04baadfe08d6-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "carregadores-portateis"
+          }
+        },
+        "40b58cfb-716f-443b-84a6-f23a6e52614a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bolsas-e-mochilas"
+          }
+        },
+        "5625cf11-9965-4208-be48-86e1bb28d283": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "necessaires"
+          }
+        },
+        "94e65f3d-7ca1-4842-bc90-4cc5c191b060": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bolsas-termicas"
+          }
+        }
+      },
+      "block_order": [
+        "template--17149120643291__6b1b4d01-ca56-4210-ae30-04baadfe08d6-featured_collection-1",
+        "template--17149120643291__6b1b4d01-ca56-4210-ae30-04baadfe08d6-featured_collection-2",
+        "template--17149120643291__6b1b4d01-ca56-4210-ae30-04baadfe08d6-featured_collection-3",
+        "40b58cfb-716f-443b-84a6-f23a6e52614a",
+        "5625cf11-9965-4208-be48-86e1bb28d283",
+        "94e65f3d-7ca1-4842-bc90-4cc5c191b060"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "b3a0bcd3-6aea-483f-bc69-d3830dcf819d",
     "db5a73f3-8079-499f-b1ba-60620d0774e7",
     "55290230-7deb-400e-8bf3-f7d31bedcf79",
-    "649910a4-c1f8-4364-b535-4b3e8ab72005"
+    "649910a4-c1f8-4364-b535-4b3e8ab72005",
+    "6b1b4d01-ca56-4210-ae30-04baadfe08d6"
   ]
 }
