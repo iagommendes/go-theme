@@ -6,21 +6,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70px;
-    background-color: #e9ed9a;
+    height: auto;
+    background-color: {{ section.settings.brand_message_background_color | default: "#e9ed9a" }};
   }
 
   .brand-message {
     margin: 0;
-    padding: 0;
+    padding: 20px;
     font-size: 20px;
     line-height: 1.5;
     color: {{ section.settings.brand_message_text_color | default: "#005baa" }};
-    text-align: center; /* Center text by default */
+    text-align: center;
   }
+
   .brand-message strong {
     font-weight: 700;
   }
+
   .brand-message a {
     color: {{ section.settings.brand_message_link_color | default: "#0000ed" }};
     text-decoration: underline;
@@ -28,7 +30,7 @@
 
   @media (max-width: 767px) {
     .brand-message {
-      text-align: center; /* Center text on mobile screens */
+      padding: 10px;
     }
   }
 {%- endstyle -%}
@@ -67,6 +69,12 @@
       "label": "Link Color",
       "id": "brand_message_link_color",
       "default": "#0000ed"
+    },
+    {
+      "type": "color",
+      "label": "Background Color",
+      "id": "brand_message_background_color",
+      "default": "#e9ed9a"
     }
   ],
   "presets": [{ "name": "Brand message" }]
