@@ -65,17 +65,8 @@
   }
 
   @media (max-width: 767px) {
-    .topbar-container {
-      flex-direction: column;
-    }
-
-    .topbar-messages {
-      margin-bottom: 10px;
-    }
-
-    .topbar-menu {
-      display: none; /* Hide the menu on mobile devices */
-      margin-top: 10px;
+    .topbar {
+      display: none; /* Hide the topbar on mobile devices */
     }
   }
 
@@ -213,7 +204,7 @@
   <style>
     @media (max-width: 767px) {
       .topbar {
-        display: block;
+        display: none; 
       }
     }
   </style>
