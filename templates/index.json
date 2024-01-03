@@ -168,6 +168,57 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "290903d5-fc67-4436-ac38-8bee8945f92d": {
+      "type": "collection-list",
+      "blocks": {
+        "template--17149120643291__290903d5-fc67-4436-ac38-8bee8945f92d-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "disney-harry-e"
+          }
+        },
+        "template--17149120643291__290903d5-fc67-4436-ac38-8bee8945f92d-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "times-de-futebol"
+          }
+        },
+        "template--17149120643291__290903d5-fc67-4436-ac38-8bee8945f92d-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "iphone-14"
+          }
+        },
+        "c1015cd4-fdda-47e4-9990-a85f3f646fb1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "novas-estampas"
+          }
+        }
+      },
+      "block_order": [
+        "template--17149120643291__290903d5-fc67-4436-ac38-8bee8945f92d-featured_collection-1",
+        "template--17149120643291__290903d5-fc67-4436-ac38-8bee8945f92d-featured_collection-2",
+        "template--17149120643291__290903d5-fc67-4436-ac38-8bee8945f92d-featured_collection-3",
+        "c1015cd4-fdda-47e4-9990-a85f3f646fb1"
+      ],
+      "custom_css": [
+        ".full-unstyled-link {font-size: 21px; text-align: center; margin-top: 5px; font-weight: 700;}",
+        ".icon-wrap {display: none;}"
+      ],
+      "settings": {
+        "title": "Destaques",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-4",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -175,6 +226,7 @@
     "db5a73f3-8079-499f-b1ba-60620d0774e7",
     "55290230-7deb-400e-8bf3-f7d31bedcf79",
     "649910a4-c1f8-4364-b535-4b3e8ab72005",
-    "6b1b4d01-ca56-4210-ae30-04baadfe08d6"
+    "6b1b4d01-ca56-4210-ae30-04baadfe08d6",
+    "290903d5-fc67-4436-ac38-8bee8945f92d"
   ]
 }
