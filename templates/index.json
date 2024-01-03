@@ -205,7 +205,8 @@
       ],
       "custom_css": [
         ".full-unstyled-link {font-size: 21px; text-align: center; margin-top: 5px; font-weight: 700;}",
-        ".icon-wrap {display: none;}"
+        ".icon-wrap {display: none;}",
+        ".card__information {background-color: #fff;}"
       ],
       "settings": {
         "title": "Destaques",
